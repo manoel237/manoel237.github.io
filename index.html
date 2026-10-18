@@ -190,12 +190,12 @@ footer{border-top:1px solid var(--line); padding-top:20px; display:flex; flex-wr
   </header>
 
   <div style="display:flex; flex-direction:column; gap:18px">
-    <p class="summary">I’m an Electrical Engineering student from Brazil, based in Karlsruhe and studying at Karlsruhe University of Applied Sciences (HKA) for up to two semesters. I design, build and test electronics for measurement systems, from the schematic and the PCB to data acquisition and signal analysis. At CEFET-MG, I worked in an instrumentation laboratory developing sensors and acquisition systems that went to the field. I’m looking for a student assistant (HiWi) or working student position in electronics, instrumentation or signal processing.</p>
+    <p class="summary">I’m an Electrical Engineering student from Brazil, on exchange at Karlsruhe University of Applied Sciences (HKA) in 2026/27. For two years I did undergraduate research at LABTEM, the lightning research laboratory of CEFET-MG: instrumentation hardware, field measurements, data acquisition and automated processing of the recorded data. This work is the basis of a journal article I co-authored.</p>
     <dl class="stats">
       <div><dt>2 years</dt><dd>of hands-on R&amp;D in an instrumentation lab</dd></div>
       <div><dt>5</dt><dd>publications: 1 journal article, 4 conference papers</dd></div>
-      <div><dt>2 months</dt><dd>field measurement campaign with the systems I built</dd></div>
-      <div><dt>4</dt><dd>projects, from PCB design to data analysis</dd></div>
+      <div><dt>700–800</dt><dd>lightning events recorded in a 2-month field campaign</dd></div>
+      <div><dt>~1,000</dt><dd>high-speed videos sorted with my Python tool</dd></div>
     </dl>
   </div>
 
@@ -212,14 +212,14 @@ footer{border-top:1px solid var(--line); padding-top:20px; display:flex; flex-wr
           <div class="b-main">
             <span class="label">Software · 2025 – 2026</span>
             <h3>Automated pre-filtering of high-speed video</h3>
-            <p>A Python tool that finds the relevant events in high-speed camera recordings and discards false triggers.</p>
+            <p>A Python tool that replaced the fully manual selection of ~1,000 high-speed videos (1–2 TB, ~3,000 frames each). It finds the lightning events, and a person validates and classifies each one by keyboard.</p>
           </div>
           <div class="b-side">
             <ul>
-              <li>Divides each frame into slices and tracks their luminosity over thousands of frames</li>
-              <li>Builds space–time luminosity maps to locate when and where an event happens</li>
-              <li>Interactive viewer to review and edit each detected event</li>
-              <li>Less manual review time and less storage for irrelevant recordings</li>
+              <li>Discards frames without lightning by tracking the luminosity of image slices over thousands of frames</li>
+              <li>Groups the frames of each stroke and proposes the stroke interval</li>
+              <li>Keyboard-based review: confirm or correct the interval and classify the event (intra-cloud, cloud-to-ground, long continuing current)</li>
+              <li>Result: duration, timestamp and type saved for every event, each in its own folder</li>
             </ul>
             <dl class="spec"><dt>Where</dt><dd>LABTEM laboratory, CEFET-MG</dd><dt>Tools</dt><dd><div class="tags"><span class="tag">Python</span><span class="tag">Computer vision</span><span class="tag">Plotly</span><span class="tag">Matplotlib</span></div></dd></dl>
           </div>
@@ -238,7 +238,7 @@ footer{border-top:1px solid var(--line); padding-top:20px; display:flex; flex-wr
               <li>Evaluated and replaced critical analog components</li>
               <li>Functional testing of the complete system</li>
               <li>Designed 3D-printed enclosures in SolidWorks</li>
-              <li>Two-month field measurement campaign; the data became a journal publication [1]</li>
+              <li>Two-month field measurement campaign: 700–800 lightning events out of 2,000+ triggers; the data became a journal publication [1]</li>
               <li>Ground measurements synchronized with electric-field stations and the GLM lightning mapper on board a geostationary satellite</li>
             </ul>
             <dl class="spec"><dt>Where</dt><dd>LABTEM laboratory, CEFET-MG</dd><dt>Tools</dt><dd><div class="tags"><span class="tag">Analog circuits</span><span class="tag">SolidWorks</span><span class="tag">3D printing</span><span class="tag">PXI</span></div></dd></dl>
@@ -289,14 +289,15 @@ footer{border-top:1px solid var(--line); padding-top:20px; display:flex; flex-wr
       </article>
 
       <article class="card">
-        <span class="label">Data acquisition · 2024 – 2026</span>
+        <span class="label">Data acquisition &amp; processing · 2024 – 2026</span>
         <h3>Waveform acquisition &amp; analysis</h3>
-        <p>Acquisition systems for fast transient signals and the analysis behind them.</p>
+        <p>Recording fast lightning signals in the field and analyzing them.</p>
         <ul>
-          <li>LabVIEW programs to record waveforms with PXI/PCI hardware</li>
-          <li>Signal processing and interpretation in Python and MATLAB</li>
+          <li>Recorded electric field and current at 5 MS/s and luminosity at 30 MS/s with PXI/PCI digitizers</li>
+          <li>Analyzed the waveforms in Python and MATLAB</li>
+          <li>Cross-referenced photometer data with 5–6 electric-field sensors in the Belo Horizonte area [1]</li>
         </ul>
-        <dl class="spec"><dt>Where</dt><dd>LABTEM laboratory, CEFET-MG</dd><dt>Tools</dt><dd><div class="tags"><span class="tag">LabVIEW</span><span class="tag">PXI/PCI</span><span class="tag">Python</span><span class="tag">MATLAB</span></div></dd></dl>
+        <dl class="spec"><dt>Where</dt><dd>LABTEM laboratory, CEFET-MG</dd><dt>Tools</dt><dd><div class="tags"><span class="tag">PXI/PCI</span><span class="tag">Python</span><span class="tag">MATLAB</span></div></dd></dl>
       </article>
     </div>
     <p class="fig-source">[1] Photometer figures reproduced from M. Guimarães, …, M. Gonçalves, et al., “Measurements of ultraviolet and infrared emissions during positive and negative lightning events in Brazil,” <i>Electric Power Systems Research</i>, vol. 259, 113317, 2026. <a href="https://www.sciencedirect.com/science/article/pii/S0378779626006103" target="_blank" rel="noopener">Open access, CC BY 4.0</a>.</p>
@@ -305,9 +306,9 @@ footer{border-top:1px solid var(--line); padding-top:20px; display:flex; flex-wr
   <section>
     <h2>Skills</h2>
     <div class="skills">
-      <div><h3>Electronics</h3><p>Schematic and PCB design (Altium Designer), analog and digital circuits, SMD and through-hole soldering, oscilloscope-based debugging, Multisim.</p></div>
-      <div><h3>Measurement &amp; data</h3><p>LabVIEW, PXI/PCI instrumentation, Python, MATLAB, basic microcontroller programming.</p></div>
-      <div><h3>Mechanical &amp; RF</h3><p>SolidWorks, 3D printing, CST Studio Suite (microstrip antennas at 2.45 and 5.8 GHz).</p></div>
+      <div><h3>Electronics</h3><p>Schematic and PCB design (Altium Designer), analog circuits, SMD and through-hole soldering, functional testing, oscilloscope-based debugging, EMI/EMC shielding, Multisim.</p></div>
+      <div><h3>Measurement &amp; data</h3><p>Python, MATLAB, LabVIEW (basic), PXI/PCI instrumentation, signal processing, image processing.</p></div>
+      <div><h3>Mechanical &amp; RF</h3><p>SolidWorks, 3D printing, CST Studio Suite (coursework: microstrip antennas at 2.45 and 5.8 GHz).</p></div>
     </div>
   </section>
 
@@ -326,14 +327,14 @@ footer{border-top:1px solid var(--line); padding-top:20px; display:flex; flex-wr
   <section>
     <h2>Education</h2>
     <div class="edu">
-      <div><span class="label">Since Sep 2026</span><h3>Karlsruhe University of Applied Sciences (HKA)</h3><p>Academic exchange: thick-film circuits, cleanroom technology, microtechnology lab, energy supply for autonomous microsystems.</p></div>
-      <div><span class="label">2022 – 2027 (expected)</span><h3>CEFET-MG, Brazil</h3><p>B.Sc. in Electrical Engineering, 7 of 10 semesters completed.</p></div>
+      <div><span class="label">09/2026 – today</span><h3>Karlsruhe University of Applied Sciences (HKA)</h3><p>Academic exchange in Electrical Engineering.</p></div>
+      <div><span class="label">03/2023 – 08/2028 (expected)</span><h3>CEFET-MG, Brazil</h3><p>B.Sc. in Electrical Engineering, 7 of 10 semesters completed · Grade 80.3/100.</p></div>
     </div>
   </section>
 
   <footer>
-    <span>Languages: Portuguese (native) · English (professional) · German (A1, learning)</span>
-    <span>Open to HiWi and working student positions in Karlsruhe</span>
+    <span>Languages: Portuguese (native) · English (B2) · German (A1, learning)</span>
+    <span>Open to internships and working student positions</span>
   </footer>
 </div>
 
